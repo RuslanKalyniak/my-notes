@@ -9,11 +9,15 @@ import imageUrl3 from "../../image/Arrow3.png";
 
 export default function Compas({}) {
     const [rotateClass, setRotateClass] = useState("");
+    const [scalleClass, setScalleClass] = useState("");
     const [compasLetterValue, setCompasLetterValue] = useState(false);
 
     useEffect(() => {
         setTimeout(() => {
             setRotateClass(styles.fullRotation);
+        }, 250);
+        setTimeout(() => {
+            setScalleClass(styles.fullScale);
         }, 250);
         setTimeout(() => {
             setCompasLetterValue(true);
@@ -23,19 +27,21 @@ export default function Compas({}) {
     return (
     <div className={styles.compas}>
         <div className={styles.compasBody}>
-            <Image
-                src={imageUrl2}
-                quality={100}
-                width={300}
-                height={240}
-                alt="Main Arrow"
-            />
+            <div className={`${styles.compasCircle} ${scalleClass}`}>
+                <Image
+                    src={imageUrl2}
+                    quality={100}
+                    width={200}
+                    height={160}
+                    alt="Compas"
+                />
+            </div>
             <div className={`${styles.compasArrow} ${rotateClass}`}>
                 <Image
-                    src={imageUrl3}
+                    src={imageUrl1}
                     quality={100}
-                    width={105}
-                    height={265}
+                    width={70}
+                    height={184}
                     alt="Main Arrow"
                 />
             </div>

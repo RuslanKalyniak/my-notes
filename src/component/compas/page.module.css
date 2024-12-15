@@ -1,43 +1,37 @@
 .compas {
     position: relative;
-    width: 100%;
-    border: 1px solid red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     z-index: 1;
 }
 
 .compasBody {
     position: relative;
-    border: 1px solid red;
+}
+
+.compasCircle {
+    transform: rotate(0deg);
+    transform-origin: 101.5px 63px;
+}
+
+.fullScale {
+    animation: scalledSpin 1.5s ease-in-out;
 }
 
 .compasArrow {
     position: absolute;
-    bottom: 103px;
-    left: 90px;
+    bottom: 68px;
+    left: 66px;
     transform: rotate(0deg);
-    transform-origin:  55px 228px;
+    transform-origin: 35.5px 155px;
 }
 
 .fullRotation {
     animation: spinAndStop 1.5s ease-in-out;
 }
 
-@keyframes spinAndStop {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(1080deg);
-    }
-}
-
 .compasLetter {
     position: absolute;
-    bottom: 390px;
-    left: 128px;
+    bottom: 280px;
+    left: 84px;
     z-index: 10;
     width: 30px;
     height: 20px;
@@ -45,6 +39,24 @@
 
 .compasLetterSvg {
     animation: draw 1.5s ease forwards;
+}
+
+@keyframes spinAndStop {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(720deg);
+    }
+}
+
+@keyframes scalledSpin {
+    0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(-720deg);
+    }
 }
 
 @keyframes draw {

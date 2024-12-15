@@ -1,0 +1,10 @@
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+.compas {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
