@@ -13,12 +13,16 @@ export default function Station({}) {
     return (
     <div className={styles.titleContainer}>
         <Image
+            className={styles.station}
             alt="Station-img"
             src={stationUrl}
             placeholder="blur"
             quality={100}
             width={600}
             height={800}
+            layout="responsive"
+            loading="lazy"
+            objectFit="cover"
         />
     </div>
     );

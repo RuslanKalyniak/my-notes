@@ -2,11 +2,12 @@
 import { useState } from "react";
 import styles from "./page.module.css";
 
-export default function StepsCircle({}) {
+export default function StepsCircle({text}) {
 
     return (
         <div className={styles.footsteps}>
-            {Array.from({ length: 15 }, (_, index) => {
+            <h2>{text}</h2>
+            {Array.from({ length: 17 }, (_, index) => {
                 // Скорочуємо час зникання для попередніх слідів
                 const animationDuration = 12.5 - index * 4;
 
@@ -15,7 +16,7 @@ export default function StepsCircle({}) {
                         <span
                             className={`${styles.footstepsLeft}`}
                             style={{
-                                animationDelay: `${index * 0.8}s`,
+                                animationDelay: `${index * 0.1}s`,
                             }}
                         >
                             <svg fill="#000000" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20px" height="40px" viewBox="0 0 515.458 515.458">
@@ -30,7 +31,7 @@ export default function StepsCircle({}) {
                         <span
                             className={`${styles.footstepsRight}`}
                             style={{
-                                animationDelay: `${index * 0.8 + 0.4}s`,
+                                animationDelay: `${index * 0.1 + 0.1}s`,
                             }}
                         >
                             <svg fill="#000000" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20px" height="40px" viewBox="0 0 515.458 515.458">

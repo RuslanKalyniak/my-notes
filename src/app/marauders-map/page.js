@@ -7,24 +7,41 @@ import Background from "@/component/background/page";
 import Title from "@/component/title/page";
 import Station from "@/component/station/page";
 import StationFirsrt from "@/component/stationFirsrt/page";
+import Table from "@/component/table/page";
+import CountdownTimer from "@/component/countdownTimer/page";
 
 export default function Map() {
+
     return (
         <>
+            {/* --- */}
+            {/* --- */}
+            {/* --- */}
             <div className={styles.title}>
-                <Title />
-            </div>
-            <Background />
-            <div className={styles.containerMap}>
                 <StationFirsrt />
-                    <div className={styles.containerMapRoom}>
-                        <StepsCircle />
-                        <Steps stepsCount={5} animationDuration={10.5} />
-                        <Steps stepsCount={15} animationDuration={2.5}/>
-                        <Steps stepsCount={10} animationDuration={8}/>
-                    </div>
+                <div className={styles.titleContainer}>
+                    <Title />
+                    <CountdownTimer initialSeconds={60} />
+                </div>
                 <Station />
             </div>
+            {/* --- */}
+            {/* --- */}
+            {/* --- */}
+            <div>
+                <Table />
+            </div>
+            <Background />
+            {/* --- */}
+            {/* --- */}
+            {/* --- */}
+            {/* <div className={styles.containerMap}>
+                <div className={styles.containerMapRoom}>
+                    <Steps stepsCount={5} animationDuration={2.5} />
+                    <Steps stepsCount={15} animationDuration={2.5}/>
+                    <Steps stepsCount={10} animationDuration={8}/>
+                </div>
+            </div> */}
         </>
     )
 }

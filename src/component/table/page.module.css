@@ -1,0 +1,45 @@
+.table {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    margin-top: 1rem;
+}
+
+.tableInput {
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 1.5rem;
+    width: 250px;
+}
+
+
+.tableInput::placeholder {
+    font-size: 2rem;
+    color: black;
+}
+
+.tableButton {
+    cursor: pointer;
+    border: 1px solid black;
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: .5rem;
+    background-color: #F3D1A6;
+    width: 250px;
+}
+
+.tableItemsGrid {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 100px;
+    padding-top: 100px;
+    z-index: 1;
+    width: 100%;
+    justify-content: center;
+}

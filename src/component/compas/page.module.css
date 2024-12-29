@@ -7,6 +7,11 @@
     position: relative;
 }
 
+.compasBodySize {
+    width: 200px;
+    height: 160px;
+}
+
 .compasCircle {
     transform: rotate(0deg);
     transform-origin: 101.5px 63px;
@@ -18,10 +23,15 @@
 
 .compasArrow {
     position: absolute;
-    bottom: 68px;
-    left: 66px;
+    bottom: 65px;
+    left: 63.5px;
     transform: rotate(0deg);
-    transform-origin: 35.5px 155px;
+    transform-origin: 38.5px 167.5px;
+}
+
+.compasArrowSize {
+    width: 76px;
+    height: 199px;
 }
 
 .fullRotation {

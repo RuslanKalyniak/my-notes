@@ -2,3 +2,7 @@
     position: relative;
     z-index: 1;
 }
+
+.title {
+    max-width: 200px;
+}

@@ -21,7 +21,7 @@
 .footstepsLeft,
 .footstepsRight {
     opacity: 0;
-    animation: fadeInOut 12.5s infinite ease-in-out forwards;
+    animation: fadeInOut 1.5s infinite ease-in-out forwards;
 }
 
 @keyframes fadeInOut {
@@ -193,6 +193,28 @@
     top: 24%;
     left: 4%;
     transform: rotate(380deg);
+}
+
+.footstepsContainer15 {
+    display: flex;
+    align-items: center;
+    width: 35px;
+    height: 40px;
+    position: absolute;
+    top: 10%;
+    left: 12%;
+    transform: rotate(402deg);
+}
+
+.footstepsContainer16 {
+    display: flex;
+    align-items: center;
+    width: 35px;
+    height: 40px;
+    position: absolute;
+    top: 2%;
+    left: 24%;
+    transform: rotate(434deg);
 }
 
 

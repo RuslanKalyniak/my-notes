@@ -1,0 +1,15 @@
+.titleContainer {
+    position: relative;
+    z-index: 1;
+}
+
+.timerTitle {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+
+    & > h2 {
+
+    }
+}

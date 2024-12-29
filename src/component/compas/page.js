@@ -29,20 +29,24 @@ export default function Compas({}) {
         <div className={styles.compasBody}>
             <div className={`${styles.compasCircle} ${scalleClass}`}>
                 <Image
+                    className={styles.compasBodySize}
                     src={imageUrl2}
                     quality={100}
-                    width={200}
-                    height={160}
                     alt="Compas"
+                    loading="lazy"
+                    objectFit="cover"
+
                 />
             </div>
             <div className={`${styles.compasArrow} ${rotateClass}`}>
                 <Image
+                    className={styles.compasArrowSize}
                     src={imageUrl1}
                     quality={100}
-                    width={70}
-                    height={184}
                     alt="Main Arrow"
+                    //layout="responsive"
+                    loading="lazy"
+                    objectFit="cover"
                 />
             </div>
             { compasLetterValue && (

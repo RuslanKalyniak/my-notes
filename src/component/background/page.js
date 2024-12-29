@@ -7,18 +7,6 @@ export default function Background({}) {
 
     return (
     <div>
-        {/* <Image
-            alt="background-img"
-            src={imageUrl}
-            placeholder="blur"
-            quality={100}
-            fill
-            sizes="100vh"
-            style={{
-                position: "absolute",
-                objectFit: "cover",
-            }}
-        /> */}
         <div className={styles.background}></div>
     </div>
     );

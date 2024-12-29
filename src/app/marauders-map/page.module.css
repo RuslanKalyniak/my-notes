@@ -1,8 +1,12 @@
 .title {
     width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    border: 5px dashed black;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
 }
 
 .containerMap {
@@ -12,4 +16,10 @@
 .containerMapRoom {
     display: flex;
     flex-direction: column;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
