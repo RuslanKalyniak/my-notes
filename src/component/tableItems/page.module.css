@@ -5,7 +5,6 @@
 
 .tableItems0 {
     position: relative;
-    border: 3px solid black;
     border-radius: 10px;
     min-height: 50px;
     max-width: 150px;
@@ -13,8 +12,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    box-shadow: 0px 0px 10px black;
     margin-bottom: 5rem;
+    background-color: #F3D1A6;
 
     & > p {
         margin: 0;
@@ -29,14 +29,13 @@
         border-radius: 10px;
         border: 2px solid #f3d1a6;
         min-width: 130px;
-        min-height: 25;
-
+        min-height: 25px;
     }
 }
 
 .tableItems0Counter {
     position: absolute;
-    top: -28px;
+    top: -35px;
     left: 100px;
     font-size: 1.3rem;
     font-weight: bold;
@@ -51,10 +50,8 @@
 
 .tableItems1Counter {
     position: absolute;
-    top: -28px;
+    top: -35px;
     left: 100px;
-    font-size: 1.3rem;
-    font-weight: bold;
 }
 
 .tableItems1Steps {
@@ -97,14 +94,42 @@
     width: 100%;
     height: 5px;
     background-color: #e0e0e0;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     border-radius: 5px;
     overflow: hidden;
 }
 
 .progressBarFill {
     height: 100%;
-    background-color: #4caf50;
+    background-color: #856133;
     width: 0;
     transition: width 0.1s linear;
+}
+
+.tableItemName {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    height: max-content;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.tableItems0Counter,
+.tableItems1Counter,
+.tableItems1CounterDown {
+    max-width: 150px;
+
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    z-index: 2;
 }

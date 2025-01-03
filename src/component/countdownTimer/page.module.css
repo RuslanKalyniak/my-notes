@@ -6,10 +6,19 @@
 .timerTitle {
     display: flex;
     margin: 0;
-    width: 100%;
+    width: 200px;
+    height: 200px;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #F3D1A6;
+    text-shadow: black 2px 0 10px;
 
     & > h2 {
-
+        height: max-content;
+        font-size: 2.5rem;
+        font-weight: 900;
+        letter-spacing: -2px;
+        text-transform: uppercase;
     }
 }

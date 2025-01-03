@@ -1,9 +1,22 @@
-.title {
+.container {
+    position: relative;
     width: 100%;
     max-width: 1600px;
+    z-index: 1;
     margin: 0 auto;
+    padding: 1rem;
+}
+
+.content {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px dashed #F3D1A6;
+}
+.title {
     display: flex;
-    border: 5px dashed black;
     justify-content: space-between;
     position: relative;
     z-index: 1;
@@ -21,5 +34,5 @@
 .titleContainer {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }

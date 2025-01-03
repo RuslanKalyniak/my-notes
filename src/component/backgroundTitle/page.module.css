@@ -1,0 +1,317 @@
+body.menuOpen {
+    overflow: hidden; 
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    background-color: wheat;
+    z-index: 2;
+    transition: all 1.5s ease-in-out;
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+
+    background-image:
+        linear-gradient(0deg, #000, transparent 56.35%), 
+        url('../../image/background1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+    margin: 0 auto;
+    width: 100%;
+    max-width: 3400px
+}
+
+.removeBackground {
+    position: sticky;
+    top: 0;
+    height: 65px;
+}
+
+.background {
+    position: relative;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    font-size: 6rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    transition: all 1.5s;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.titleSmall {
+    font-size: 1.5rem;
+}
+
+.titleStart {
+    top: 10px;
+    left: 1rem;
+    transform: translate(0, 0);
+    color: #F3D1A6;
+}
+
+.buttonBurger {
+    position: absolute;
+    top: 50%;
+    right : 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    transition: all 1.5s;
+    width: max-content;
+}
+
+.buttonBurgerVisible {
+    display: block;
+}
+
+.buttonBurgerPosition {
+    top: 10px;
+    right: 1rem;
+    transform: translate(0, 0) scale(.6);
+}
+
+.hamburger .line{
+    width: 50px;
+    height: 5px;
+    background-color: #F3D1A6;;
+    display: block;
+    margin: 8px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.hamburger{
+    position: relative;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.hamburger.isActive{
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.hamburger:before{
+    content: "";
+    position: absolute;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 70px;
+    height: 70px;
+    border: 5px solid transparent;
+    top: calc(50% - 35px);
+    left: calc(50% - 35px);
+    border-radius: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger.isActive:before{
+    border: 5px solid #F3D1A6;
+}
+
+.hamburger.isActive .line{
+    width: 35px;
+}
+
+.hamburger.isActive .line:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger.isActive .line:nth-child(1){
+    -webkit-transform: translateY(13px);
+    -ms-transform: translateY(13px);
+    -o-transform: translateY(13px);
+    transform: translateY(13px);
+}
+
+.hamburger.isActive .line:nth-child(3){
+    -webkit-transform: translateY(-13px) rotate(90deg);
+    -ms-transform: translateY(-13px) rotate(90deg);
+    -o-transform: translateY(-13px) rotate(90deg);
+    transform: translateY(-13px) rotate(90deg);
+}
+
+
+.slideInBottom {
+	-webkit-animation: scale-up-ver-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-ver-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.slideInBottom1 {
+	-webkit-animation: scale-up-ver-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-ver-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+@-webkit-keyframes scale-up-ver-bottom {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+    }
+}
+@keyframes scale-up-ver-bottom {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+    }
+}
+
+.titleContainer {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%) scale(.4);
+}
+
+.titleTimer {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%) scale(.4);
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.titleTimerVisible {
+    opacity: 1;
+}
+
+.infoBox {
+    position: absolute;
+    width: 100%;
+    top: 65px;
+    overflow: hidden;
+    height: 0px;
+    transition: all .5s ease-in-out;
+    background-color: #F3D1A6;
+}
+
+.infoBox {
+    & > h2 {
+        margin-top: 2rem;
+        font-size: 4rem;
+        font-weight: 900;
+        letter-spacing: -2px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    & > h4 {
+        font-size: 2rem;
+        font-weight: 900;
+        letter-spacing: -2px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    & > p {
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
+
+.infoBox.isActive{
+    height: 100vh;
+}
+
+.slideInLeft {
+	-webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slideInLeft1 {
+	-webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slideInLeft2 {
+	-webkit-animation: slide-in-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slideInLeft3 {
+	-webkit-animation: slide-in-left 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-left 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2025-1-3 11:12:17
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+}
+@keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+}

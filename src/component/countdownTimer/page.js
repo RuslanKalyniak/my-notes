@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 import { useAppContext } from "@/context/page";
 import StepsCircle from "../steps-circle/page";
 
-function CountdownTimer({ initialSeconds }) {
+function CountdownTimer({ initialSeconds = 60 }) {
     const {
         isLoadingContext,
         setIsLoadingContext,
@@ -58,12 +58,12 @@ function CountdownTimer({ initialSeconds }) {
 
     return (
         <div className={styles.timerTitle}>
-            <h1>
+            <h2>
                 Time Left:
-            </h1>
-            <h1>
+            </h2>
+            <h2>
                 {seconds}s
-            </h1>
+            </h2>
         </div>
     );
 }

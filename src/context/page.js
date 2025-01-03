@@ -20,7 +20,7 @@ export const AppProvider = ({ children }) => {
             isTimerStartContext,
             setIsTimerStartContext,
             isTimerFinishedContext,
-            setIsTimerFinishedContext
+            setIsTimerFinishedContext,
         }}>
             {children}
         </AppContext.Provider>

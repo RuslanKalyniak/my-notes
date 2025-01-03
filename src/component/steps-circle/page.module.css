@@ -6,6 +6,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    & > h2 {
+        color: #F3D1A6;
+        text-shadow: black 2px 0 10px;
+        height: max-content;
+        font-size: 2.5rem;
+        font-weight: 900;
+        letter-spacing: -2px;
+        text-transform: uppercase;
+        z-index: 2;
+    }
 }
 
 .footstepsLeft {

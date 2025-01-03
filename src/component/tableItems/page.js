@@ -12,14 +12,14 @@ export default function TableItems({ data }) {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentItem((prevItem) => (prevItem + 1) % 3);
-            setProgress(0); // Скидання прогресу після зміни
+            setProgress(0);
         }, 20000);
 
-        // Інтервал для оновлення прогресу
+
         const progressInterval = setInterval(() => {
             setProgress((prevProgress) => {
                 if (prevProgress >= 100) return 100;
-                return prevProgress + 5; // Оновлення прогресу кожні 1 сек (20 секунд / 5% = 1 сек)
+                return prevProgress + 5;
             });
         }, 1000);
 
@@ -31,7 +31,6 @@ export default function TableItems({ data }) {
 
     return (
         <div className={styles.tableItemsMain}>
-            {/* Відображення прогрес-бару */}
             <div className={styles.progressBar}>
                 <div
                     className={styles.progressBarFill}
@@ -45,7 +44,7 @@ export default function TableItems({ data }) {
                     <div className={styles.tableItems0Steps}>
                         <StepsSmall stepsCount={6} animationDuration={1.5} />
                     </div>
-                    <p>{data.name}</p>
+                    <p className={styles.tableItemName}>{data.name}</p>
                 </div>
             )}
 
@@ -55,7 +54,7 @@ export default function TableItems({ data }) {
                     <div className={styles.tableItems1Steps}>
                         <StepsSmall stepsCount={12} animationDuration={4.5} />
                     </div>
-                    <p>{data.name}</p>
+                    <p className={styles.tableItemName}>{data.name}</p>
                     <div className={styles.tableItems1CounterDown}>{data.out}</div>
                 </div>
             )}
@@ -66,7 +65,7 @@ export default function TableItems({ data }) {
                     <div className={styles.tableItems0Steps}>
                         <StepsSmall stepsCount={6} animationDuration={1.5} />
                     </div>
-                    <p>{data.name}</p>
+                    <p className={styles.tableItemName}>{data.name}</p>
                 </div>
             )}
         </div>

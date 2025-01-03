@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./page.module.css";
 import { useAppContext } from "@/context/page";
 import TableItems from "../tableItems/page";
@@ -29,10 +29,11 @@ export default function Table() {
         setIsTimerFinishedContext
     } = useAppContext();
 
+    const isFirstRender = useRef(true);
     const [data, setData] = useState(null); // Дані API
     const [error, setError] = useState(null); // Помилка запиту
     const [loading, setLoading] = useState(false); // Стан завантаження
-    const [duration, setDuration] = useState(3000); // Початкове значення duration_minutes
+    const [duration, setDuration] = useState(0); // Початкове значення duration_minutes
     const [arrayData, setArrayData] = useState([]); // Дані для таблиці
 
     function calculateSectionChanges(sectionsStart, migrations) {
@@ -130,13 +131,22 @@ export default function Table() {
     };
 
     useEffect(() => {
-        if (isTimerFinishedContext) {
-            fetchData();
-            setDuration((prevDuration) => prevDuration - 1);
+        if (isFirstRender.current) {
+            isFirstRender.current = false;
+            return;
         }
 
-        console.log(isTimerStartContext);
+        if (isTimerFinishedContext) {
+            if (duration === 0) {
+                setDuration((prevDuration) => prevDuration + 1);
+                fetchData();
+            } else {
+                setDuration((prevDuration) => prevDuration - 1);
+                fetchData();
+            }
+        }
     }, [isTimerFinishedContext]);
+
 
     return (
         <>
@@ -157,11 +167,25 @@ export default function Table() {
                 </button>
             </div>
             {
+                arrayData.length === 0 && (
+                    <div className={styles.titleNotHave}>
+                        <h2>Not Have Date</h2>
+                        <p>
+                            Try changing the time and clicking the (Fetch Date) button.
+                        </p>
+                    </div>
+                )
+            }
+            {
                 isTimerStartContext && (
                     <div className={styles.tableItemsGrid}>
                         {arrayData.map((item, index) => {
                             return (
-                                <div key={index}>
+                                <div
+                                    key={index}
+                                    className={styles.scaleInCenter}
+                                    style={{ animationDelay: `${index * 0.2}s` }}
+                                >
                                     <TableItems data={item}/>
                                 </div>
                             )
