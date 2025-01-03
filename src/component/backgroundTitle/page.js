@@ -16,11 +16,13 @@ export default function BackgroundTitle({setStateClass}) {
     const [titleClass, setTitleClass] = useState(false);
 
     useEffect(() => {
+        if (typeof window === "undefined") return;
+
         const handleScroll = () => {
-            if (window.scrollY  > 200) {
-                setTitleClass(true)
+            if (window.scrollY > 200) {
+                setTitleClass(true);
             } else {
-                setTitleClass(false)
+                setTitleClass(false);
             }
         };
 
@@ -30,7 +32,6 @@ export default function BackgroundTitle({setStateClass}) {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
-
 
     useEffect(() => {
         setTimeout(() => {

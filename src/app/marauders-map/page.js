@@ -15,21 +15,7 @@ import { use, useEffect, useState } from "react";
 
 export default function Map() {
     const [state, setStateClass] = useState(false);
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setScreenWidth(window.innerWidth);
-        };
-
-        console.log(screenWidth, 'screenWidth')
-        window.addEventListener("resize", handleResize);
-
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
-
+    
     return (
         <>
             {/* --- */}

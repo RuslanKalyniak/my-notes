@@ -3,7 +3,7 @@ import "./globals.css";
 
 
 export const metadata = {
-  title: "RUSLAN",
+  title: "Marauders Map",
   description: "Ruslan",
 };
 
